@@ -1,0 +1,7 @@
+<h1> Welcome to All Bookings </h1>
+
+<ul>
+<% @bookings.each do |booking|%>
+    <li> <%= link_to booking.parent.name, booking_path(booking) %></li>
+<%end%>
+</ul>

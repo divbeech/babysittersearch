@@ -1,0 +1,14 @@
+<h1> All your booking </h1>
+
+<p> Parent Name: <%= @parent.name %><br></p>
+<p> Sitter Name: <%= @sitter.name %><br></p>
+<p> Start Date: <%= @booking.start_date %><br></p>
+<p> Start Time: <%= @booking.start_time %><br></p>
+<p> End Date: <%= @booking.end_date %><br></p>
+<p> End Time: <%= @booking.end_time %><br></p>
+
+
+
+    <li> <%= link_to "Edit", edit_booking_path(@booking) %></li>
+
+

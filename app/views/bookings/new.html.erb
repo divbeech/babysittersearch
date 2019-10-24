@@ -1,0 +1,23 @@
+<h1> Create a new booking </h1>
+<%=  form_for @booking do |f| %>
+    <%= f.label :parent  %>
+    <%= f.collection_select :parent_id, @parents, :id,:name, prompt: true %>
+    <br>
+    <%= f.label :sitter %>
+    <%= f.collection_select :sitter_id, @sitters, :id, :name, prompt: true %>
+    <br>
+    <%= f.label :start_date %>
+    <%= f.date_field :start_date %>
+    <%= f.label :start_time %>
+    <%= f.time_field :start_time %>
+    <br>
+     <%= f.label :end_date %>
+    <%= f.date_field :end_date %>
+    <%= f.label :end_time %>
+    <%= f.time_field :end_time %>
+
+
+    <%= f.submit %>
+
+
+<% end %> 

@@ -1,0 +1,6 @@
+<h1> Sitter Page </h1>
+<ul>
+<% @sitters.each do |sitter|%>
+    <li> <%= link_to sitter.name, sitter_path(sitter) %></li>
+<%end%>
+</ul>

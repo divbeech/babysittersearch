@@ -1,0 +1,6 @@
+<h1> Welcome Parents </h1>
+<ul>
+<% @parents.each do |parent|%>
+    <li> <%= link_to parent.name, parent_path(parent) %></li>
+<%end%>
+</ul>
