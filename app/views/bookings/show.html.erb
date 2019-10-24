@@ -9,6 +9,11 @@
 
 
 
-    <li> <%= link_to "Edit", edit_booking_path(@booking) %></li>
-
+    <li> <%= link_to "Edit your booking", edit_booking_path(@booking) %></li>
+    <br>
+  <li> <%= link_to "Delete", @booking, :method => :delete, :confirm => "Are you sure ?"%> </li>
+   <br>
+    <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/"> Back to home page  </a>
+</nav>
 

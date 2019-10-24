@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
     def index  
         @bookings = Booking.all
-        @test = @bookings.map do |booking|
-            booking.parent
-        end 
-        byebug
+        # @test = @bookings.map do |booking|
+        #     booking.parent
+        # end 
+        
     end
 
     def new 
@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
 
     def create 
        @booking = Booking.new(booking_params)
+      
         if @booking.save
         
             redirect_to booking_path(@booking)
@@ -38,6 +39,7 @@ class BookingsController < ApplicationController
     def update
         @booking = Booking.find(params[:id])
         @booking.update(booking_params)
+        redirect_to booking_path(@booking)
        end
     
     def destroy

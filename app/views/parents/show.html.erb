@@ -1,5 +1,11 @@
-<h1> You have booked these </h1>
+<h1> Your Information </h1>
 
-parent name / 
+<p> Parent Name: <%= @parent.name %><br></p>
+<p> Your Child age: <%= @parent.childs_age %><br></p>
 
- child's age
+ <%= link_to "Create Booking" , new_booking_path %>
+
+    <li> <%= link_to "Edit your information", edit_parent_path(@parent) %></li>
+    <br>
+  <li> <%= link_to "Delete", @parent, :method => :delete, :confirm => "Are you sure ?"%> </li>
+

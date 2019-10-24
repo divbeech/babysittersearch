@@ -1,3 +1,12 @@
-<h1> Here are your bookings </h1>
-name 
-accessible to only same sitter and previous and upcoming jobs
+<h1> Your Information </h1>
+
+<p> Sitters Name: <%= @sitter.name %><br></p>
+
+
+ <%= link_to "Create a Booking" , new_booking_path %>
+ 
+
+    <li> <%= link_to "Edit your information", edit_sitter_path(@sitter) %></li>
+    <br>
+  <li> <%= link_to "Delete", @sitter, :method => :delete, :confirm => "Are you sure ?"%> </li>
+

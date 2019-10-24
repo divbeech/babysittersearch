@@ -1,2 +1,8 @@
-<h1> Create a new user</h1>
-form to create a new parent - redirected to his show page. if not render this page with error message.
+<h1> Create a New Parent</h1>
+<%= form_for @parent do |f| %>
+  Name: <%= f.text_field :name %><br />
+  Child's age : <%= f.number_field :childs_age %><br />
+ 
+   <%= f.submit %>
+<% end %> 
+
